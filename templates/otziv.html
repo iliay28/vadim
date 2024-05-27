@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      body {
+        background-image: url(./static/фон_2.png);
+      }
+.container {
+  background-image: url("./static/1603473953_screenshot_4_1_4.png");
+  background-size: cover;
+  height: 700px;
+  margin: -8px;
+}
+
+.bort {
+    background: rgba(210.36, 207.38, 207.38, 0.64); 
+    border-radius: 15px;
+    text-align: center;
+    margin: 300px 500px 0px 500px;
+    padding: 10px;
+}
+
+ul {
+  display: flex;
+  background-color: slategray;
+  opacity: 0.7;
+  border-radius: 0px 0px 20px 20px;
+  list-style: none;
+  margin: 0px 460px 0px 460px;
+  padding: 0px 10px 0px 15px;
+}
+
+li {
+  display: inline-block;
+  color: white;
+  margin: 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.zagi {
+  background-color: #423030;
+  text-align: center;
+  padding: 2px;
+  margin: 8px -8px 0px -8px;
+}
+footer {
+  background-color: black;
+  margin: 0px -8px -20px -8px;
+}
+
+h2 {
+  color: white;
+  margin: 50px 0px 0px 20px;
+}
+
+.h2 {
+  color: white;
+  margin-left: 100px;
+  margin-top: 50px;
+}
+
+.info {
+  display: flex;
+}
+
+.rit {
+  margin-left: auto;
+  margin-right: 100px;
+}
+
+.rit2 {
+  height: 60px;
+  margin-left: auto;
+  margin-right: -200px;
+  margin-top: 30px;
+}
+
+.cic {
+  margin: 30px 0px 0px 80px;
+}
+
+.p {
+  color: white;
+  margin: -30px 0px 0px 180px;
+}
+
+.p_2 {
+  color: white;
+  margin: -30px 0px 0px 30px;
+}
+.ssilki {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex-wrap: wrap; */
+  margin-top: 80px;
+  gap: 60px;
+}
+
+.smoll {
+  height: 50px;
+}
+
+.ssilki2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex-wrap: wrap; */
+  margin-top: 20px;
+  gap: 60px;
+}
+
+.cards {
+  background-color: white;
+  border-radius: 15px;
+  padding: 10px;
+  margin: 20px 800px 0px 30px;
+  position: relative;
+}
+
+.cards::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 20px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 10px 0px 10px;
+  border-color: white transparent transparent transparent;
+}
+
+form {
+  background-color: #2f3640; /* dark blue-gray background */
+  border-radius: 15px;
+  padding: 20px;
+  width: 500px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  margin: 0 auto;
+  color: #fff; /* white text */
+  font-family: 'Montserrat', sans-serif; /* font inspired by Genshin Impact's UI */
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #455a64; /* dark blue-gray border */
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  background-color: #343a40; /* dark gray background */
+  color: #fff; /* white text */
+}
+
+input[type="text"]:focus {
+  outline: none;
+  box-shadow: 0 0 2px 1px #7bcffa; /* blue-green glow effect */
+}
+
+button[type="submit"] {
+  background-color: #7bcffa; /* blue-green button color */
+  color: #333; /* dark gray text */
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #56b3fa; /* lighter blue-green hover effect */
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <ul>
+                <a href="/"><li>Меню</li></a>
+                <li>Новости</li>
+                <li>О нас</li>
+                <a href="/otziv"><li>Отзывы</li></a>
+            </ul>
+            <h1 class="bort">Отзывы</h1>
+        </div>    
+      </header>
+      <div class="zagi">
+        <h1 style="color: white;">Комментарии</h1>
+        <form action="/show" method="post">
+          <input  name="file_name" type="text" placeholder="Фамилия">
+          <br>
+          <br>
+          <input name="file_context" type="text" placeholder="Ваш отзыв">
+          <br>
+          <br>
+          <button type="submit">Отправить</button>
+        </form>
+      </div>
+      {% for file_name, file_content in list_files %}
+        <div class="cards">
+          <h3 class="review-title">{{ file_name }}</h3>
+          <p class="review-text">{% for line in file_content %}{{ line }}{% endfor %}</p>
+        </div>
+      {% endfor %}
+      <br>
+      <footer>
+        <div class="info">
+          <img class="cic" src="./static/yae_miko_logo_3.png" alt="">
+          <h2>Gen Guide</h2>
+          <h2 class="h2">Услуги</h2>
+          <h2 class="h2">О проекте</h2>
+          <img class="rit2" src="./static/1490129331-rounded07_82197_2.png" alt="">
+          <h2 class="rit">vadimlg888@gmail.com</h2>
+        </div>
+        <div class="info">
+          <p class="p">Best Genshin Impact guides.</p>
+          <p class="p_2">Дизайн <br> Консультация <br> Прокачка </p>
+        </div>
+        <br>
+        <br>
+        <hr>
+        <div class="ssilki">
+          <img class="smoll" src="./static/telegram_logo_icon_187615.png" alt="">
+          <img class="smoll" src="./static/image_71.png" alt="">
+          <img class="smoll" src="./static/image_69.png" alt="">
+          <img class="smoll" src="./static/image_70.png" alt="">
+          <img class="smoll" src="./static/🦆icon _Whatsapp_.png" alt="">
+        </div>
+        <div class="ssilki2">
+          <p>©Copyright. All rights reserved.</p>
+        </div>
+      </footer>
+</body>
+</html>

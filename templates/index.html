@@ -1,19 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>{{ title }}</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      body {
+        background-image: url(./static/фон_2.png);
+      }
+.container {
+  background-image: url(./static/шапка_2.jpg);
+  background-size: cover;
+  height: 600px;
+  margin: -8px;
+}
 
+ul {
+  display: flex;
+  background-color: slategray;
+  opacity: 0.7;
+  border-radius: 0px 0px 20px 20px;
+  list-style: none;
+  margin: 0px 460px 0px 460px;
+  padding: 0px 10px 0px 15px;
+}
+
+li {
+  display: inline-block;
+  color: white;
+  margin: 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+h1 {
+  color: white;
+  margin: 200px 0px 0px 450px;
+}
+
+p {
+  color: white;
+}
+
+.ots {
+  align-items: center;
+  text-align: center;
+  width: 380px;
+  margin: 20px 0px 0px 450px;
+}
+
+.content {
+  display: block;
+}
+
+.iimag {
+  display: block;
+  margin: 0 auto;
+  height: 350px;
+}
+
+footer {
+  background-color: black;
+  margin: 0px -8px -20px -8px;
+}
+
+h2 {
+  color: white;
+  margin: 50px 0px 0px 20px;
+}
+
+.h2 {
+  color: white;
+  margin-left: 100px;
+  margin-top: 50px;
+}
+
+.info {
+  display: flex;
+}
+
+.rit {
+  margin-left: auto;
+  margin-right: 100px;
+}
+
+.rit2 {
+  height: 60px;
+  margin-left: auto;
+  margin-right: -200px;
+  margin-top: 30px;
+}
+
+.cic {
+  margin: 30px 0px 0px 80px;
+}
+
+.p {
+  margin: -30px 0px 0px 180px;
+}
+
+.p_2 {
+  margin: -30px 0px 0px 30px;
+}
+
+.ssilki {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex-wrap: wrap; */
+  margin-top: 80px;
+  gap: 60px;
+}
+
+.smoll {
+  height: 50px;
+}
+
+.ssilki2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex-wrap: wrap; */
+  margin-top: 20px;
+  gap: 60px;
+}
+    </style>
+</head>
 <body>
-    <div class="App">
-        <header class="App-header">
-            <img src="{{ url_for('static', filename='Octocat.png') }}" class="App-logo" alt="logo" />
-            <p>
-                GitHub Codespaces <span class="heart">♥️</span> Flask
-            </p>
-            <p class="small">
-                Edit <code>templates/index.html</code> and refresh to see your changes!
-            </p>
-        </header>
+  <header>
+    <div class="container">
+        <ul>
+            <a href="/"><li>Меню</li></a>
+            <li>Новости</li>
+            <li>О нас</li>
+            <a href="/otziv"><li>Отзывы</li></a>
+        </ul>
+      <h1>Твоё новое приключение!</h1>
+      <p class="ots">Подключайся к команде искателей, путешественников и просто хороших людей!</p>
+    </div>    
+  </header>
+  <div class="content">
+    <a href="/mondhtat"><img class="iimag" src="./static/Мондштат.png" alt="Мондштат"></a>
+    <img class="iimag" src="./static/Ли_Юэ.png" alt="Ли Юэ">
+    <img class="iimag" src="./static/Сумеру.png" alt="Инадзума">
+    <img class="iimag" src="./static/Иназума.png" alt="Сумеру">
+    <img class="iimag" src="./static/Фонтей.png" alt="Фонтейн">
+  </div>
+    
+  <footer>
+    <div class="info">
+      <img class="cic" src="./static/yae_miko_logo_3.png" alt="">
+      <h2>Gen Guide</h2>
+      <h2 class="h2">Услуги</h2>
+      <h2 class="h2">О проекте</h2>
+      <img class="rit2" src="./static/1490129331-rounded07_82197_2.png" alt="">
+      <h2 class="rit">vadimlg888@gmail.com</h2>
     </div>
+    <div class="info">
+      <p class="p">Best Genshin Impact guides.</p>
+      <p class="p_2">Дизайн <br> Консультация <br> Прокачка </p>
+    </div>
+    <br>
+    <br>
+    <hr>
+    <div class="ssilki">
+      <img class="smoll" src="./static/telegram_logo_icon_187615.png" alt="">
+      <img class="smoll" src="./static/image_71.png" alt="">
+      <img class="smoll" src="./static/image_69.png" alt="">
+      <img class="smoll" src="./static/image_70.png" alt="">
+      <img class="smoll" src="./static/🦆icon _Whatsapp_.png" alt="">
+    </div>
+    <div class="ssilki2">
+      <p>©Copyright. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
-
 </html>
