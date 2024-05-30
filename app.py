@@ -12,6 +12,10 @@ def hello_world():
 def world():
     return render_template("Мондштат.html", title="Hello")
 
+@app.route("/gaid")
+def kli():
+    return render_template("gaid.html", title="Hello")
+
 @app.route("/otziv")
 def creat():
     files_paths = os.listdir('./files')
