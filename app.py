@@ -16,6 +16,14 @@ def world():
 def kli():
     return render_template("gaid.html", title="Hello")
 
+@app.route("/novosti")
+def new():
+    return render_template("Новости.html", title="Hello")
+
+@app.route("/about")
+def about():
+    return render_template("О нас.html", title="Hello")
+
 @app.route("/otziv")
 def creat():
     files_paths = os.listdir('./files')
