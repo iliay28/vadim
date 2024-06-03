@@ -6,13 +6,13 @@
     <title>Document</title>
     <style>
       body {
-        background-image: url(./static/фон_2.png);
+        background-image: url(./static/1614263138_28-p-chernaya-tema-fon-31.jpg);
       }
 .container {
   background-image: url(./static/шапка_2.jpg);
   background-size: cover;
   height: 600px;
-  margin: -8px;
+  margin: -17px -8px -8px -8px;
 }
 
 ul {
@@ -21,32 +21,38 @@ ul {
   opacity: 0.7;
   border-radius: 0px 0px 20px 20px;
   list-style: none;
-  margin: 0px 455px 0px 455px;
-  padding: 0px 10px 0px 15px;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  ul {
+    margin: 0px;
+  }
 }
 
 li {
   display: inline-block;
   color: white;
-  margin: 10px;
+  margin: 8px;
   padding: 5px 10px;
   border-radius: 5px;
 }
 
 h1 {
   color: white;
-  margin: 200px 0px 0px 450px;
+  text-align: center;
+  margin-top: 200px;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 28px;
+  }
 }
 
 p {
   color: white;
-}
-
-.ots {
-  align-items: center;
   text-align: center;
-  width: 380px;
-  margin: 20px 0px 0px 450px;
 }
 
 .content {
@@ -87,7 +93,7 @@ h2 {
 .rit2 {
   height: 60px;
   margin-left: auto;
-  margin-right: -200px;
+  margin-right: -100px;
   margin-top: 30px;
 }
 
@@ -107,7 +113,6 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* flex-wrap: wrap; */
   margin-top: 80px;
   gap: 60px;
 }
@@ -120,14 +125,57 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* flex-wrap: wrap; */
   margin-top: 20px;
   gap: 60px;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    height: auto;
+    margin: 0;
+  }
+  .content {
+    padding: 0 20px;
+  }
+  .ssilki, .ssilki2 {
+    flex-direction: column;
+  }
+  .ssilki {
+    margin-top: 20px;
+  }
+  .ssilki2 {
+    margin-top: 40px;
+  }
+  .info {
+    flex-direction: column;
+  }
+  .cic {
+    margin: 10px 0 0 0;
+  }
+  .p {
+    margin: 10px 0 0 0;
+  }
+  .p_2 {
+    margin: 10px 0 0 0;
+  }
+  .h2 {
+    margin: 10px 0 0 0;
+  }
+  .rit {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .rit2 {
+    margin: 10px 0 0 0;
+  }
+  .header {
+    margin: 0;
+  }
 }
     </style>
 </head>
 <body>
-  <header>
+  <header class="header">
     <div class="container">
         <ul>
             <a href="/"><li>Главная</li></a>
@@ -136,8 +184,8 @@ h2 {
             <a href="/otziv"><li>Отзывы</li></a>
         </ul>
       <h1>Твоё новое приключение!</h1>
-      <p class="ots">Подключайся к команде искателей, путешественников и просто хороших людей!</p>
-    </div>    
+      <p>Подключайся к команде искателей, путешественников и просто хороших людей!</p>
+    </div>   
   </header>
   <div class="content">
     <a href="/mondhtat"><img class="iimag" src="./static/Мондштат.png" alt="Мондштат"></a>
@@ -146,7 +194,7 @@ h2 {
     <img class="iimag" src="./static/Иназума.png" alt="Сумеру">
     <img class="iimag" src="./static/Фонтей.png" alt="Фонтейн">
   </div>
-    
+   
   <footer>
     <div class="info">
       <img class="cic" src="./static/yae_miko_logo_3.png" alt="">
@@ -176,3 +224,4 @@ h2 {
   </footer>
 </body>
 </html>
+

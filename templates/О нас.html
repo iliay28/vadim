@@ -6,13 +6,13 @@
     <title>Document</title>
     <style>
       body {
-        background-image: url(./static/фон_2.png);
+        background-image: url(./static/1614263138_28-p-chernaya-tema-fon-31.jpg);
       }
 .container {
   background-image: url(./static/шапка_2.jpg);
   background-size: cover;
   height: 600px;
-  margin: -8px;
+  margin: -17px -8px -8px -8px;
 }
 
 ul {
@@ -21,21 +21,28 @@ ul {
   opacity: 0.7;
   border-radius: 0px 0px 20px 20px;
   list-style: none;
-  margin: 0px 455px 0px 455px;
-  padding: 0px 10px 0px 15px;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  ul {
+    margin: 0px;
+  }
 }
 
 li {
   display: inline-block;
   color: white;
-  margin: 10px;
+  margin: 8px;
   padding: 5px 10px;
   border-radius: 5px;
 }
 
 h1 {
+  text-align: center;
+  align-items: center;
   color: white;
-  margin: 200px 0px 0px 450px;
+  margin: 200px 0px 0px 0px;
 }
 
 p {
@@ -50,7 +57,9 @@ p {
 }
 
 .content {
+  display: flex;
   background-color: black;
+  margin: 8px -8px 0px -8px;
 }
 
 .iimag {
@@ -87,7 +96,7 @@ h2 {
 .rit2 {
   height: 60px;
   margin-left: auto;
-  margin-right: -200px;
+  margin-right: -100px;
   margin-top: 30px;
 }
 
@@ -124,22 +133,56 @@ h2 {
   margin-top: 20px;
   gap: 60px;
 }
+.polos {
+  width: 80px;
+  margin: 5px 5px 0px 400px;
+}
+.polos2 {
+  width: 80px;
+  margin: 5px 0px 0px 5px;
+}
+.text {
+  font-size: 50px;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  margin: 100px 200px 0px 100px;
+}
+
+@media (max-width: 600px) {
+  .text {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 400px) {
+  .text {
+    font-size: 20px;
+  }
+}
     </style>
 </head>
 <body>
   <header>
     <div class="container">
-        <ul>
-            <a href="/"><li>Главная</li></a>
-            <a href="/novosti"><li>Новости</li></a>
-            <li>О нас</li>
-            <a href="/otziv"><li>Отзывы</li></a>
-        </ul>
+      <ul>
+        <a href="/"><li>Главная</li></a>
+        <a href="/novosti"><li>Новости</li></a>
+        <a href="/about"><li>О нас</li></a>
+        <a href="/otziv"><li>Отзывы</li></a>
+      </ul>
+      <h1>Немного о нас</h1>
     </div>    
   </header>
-  <div class="content">
-    <img src="./static/Component_9.png" alt="">
-  </div>
+
+  <p class="text">Мы - команда профессионалов, сосредоточенная на достижении создании приятных и 
+    удобных веб-сайтов. </p>
+
+  <p class="text">Мы стремимся к постоянному совершенствованию и инновациям, чтобы быть всегда 
+    на шаг впереди. Наша философия базируется на принципах честности, эффективности 
+    и профессионализма. Мы гордимся нашей работой и стремимся к удовлетворению 
+    потребностей каждого клиента.</p>
+
+  <br>  
     
   <footer>
     <div class="info">

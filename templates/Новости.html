@@ -6,13 +6,13 @@
     <title>Document</title>
     <style>
       body {
-        background-image: url(./static/фон_2.png);
+        background-image: url(./static/1614263138_28-p-chernaya-tema-fon-31.jpg);
       }
 .container {
   background-image: url(./static/шапка_2.jpg);
   background-size: cover;
   height: 600px;
-  margin: -8px;
+  margin: -17px -8px -8px -8px;
 }
 
 ul {
@@ -21,14 +21,19 @@ ul {
   opacity: 0.7;
   border-radius: 0px 0px 20px 20px;
   list-style: none;
-  margin: 0px 460px 0px 460px;
-  padding: 0px 10px 0px 15px;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  ul {
+    margin: 0px;
+  }
 }
 
 li {
   display: inline-block;
   color: white;
-  margin: 10px;
+  margin: 8px;
   padding: 5px 10px;
   border-radius: 5px;
 }
@@ -54,6 +59,7 @@ p {
 .content {
   display: block;
   margin-bottom: 500px;
+  margin-top: 20px;
 }
 
 .iimag {
@@ -90,7 +96,7 @@ h2 {
 .rit2 {
   height: 60px;
   margin-left: auto;
-  margin-right: -200px;
+  margin-right: -100px;
   margin-top: 30px;
 }
 
@@ -127,22 +133,65 @@ h2 {
   margin-top: 20px;
   gap: 60px;
 }
+.news-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    
+    .news-card {
+        width: 300px;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 20px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        background: linear-gradient(90deg, #161616, #262626);
+        transition: all 0.3s ease;
+    }
+    
+    /* .news-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+    } */
+    
+    .news-title {
+        font-size: 24px;
+        font-weight: bold;
+        color: #fff;
+        margin-bottom: 10px;
+    }
+    
+    .news-content {
+        font-size: 18px;
+        color: #fff;
+        opacity: 0.8;
+    }
     </style>
 </head>
 <body>
   <header>
     <div class="container">
-        <ul>
-            <a href="/"><li>Меню</li></a>
-            <a href="/novosti"><li>Новости</li></a>
-            <li>О нас</li>
-            <a href="/otziv"><li>Отзывы</li></a>
-        </ul>
+      <ul>
+        <a href="/"><li>Главная</li></a>
+        <a href="/novosti"><li>Новости</li></a>
+        <a href="/about"><li>О нас</li></a>
+        <a href="/otziv"><li>Отзывы</li></a>
+      </ul>
       <h1>Новости</h1>
     </div>    
   </header>
-  <div class="content">        
+  <div class="content">   
+    <div class="news-container">
+      {% for el in news %}
+      <div class="news-card white-bg">
+          <h2 class="news-title white-color">{{ el.split(';')[0] }}</h2>
+          <p class="news-content white-color">{{ el.split(';')[1] }}</p>
+      </div>
+      {% endfor %}
+  </div>     
   </div>
+
+  
     
   <footer>
     <div class="info">

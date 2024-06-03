@@ -6,13 +6,13 @@
     <title>Document</title>
     <style>
       body {
-        background-image: url(./static/фон_2.png);
+        background-image: url(./static/1614263138_28-p-chernaya-tema-fon-31.jpg);
       }
 .container {
   background-image: url("./static/1603473953_screenshot_4_1_4.png");
   background-size: cover;
   height: 700px;
-  margin: -8px;
+  margin: -17px -8px -8px -8px;
 }
 
 .bort {
@@ -29,14 +29,19 @@ ul {
   opacity: 0.7;
   border-radius: 0px 0px 20px 20px;
   list-style: none;
-  margin: 0px 460px 0px 460px;
-  padding: 0px 10px 0px 15px;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  ul {
+    margin: 0px;
+  }
 }
 
 li {
   display: inline-block;
   color: white;
-  margin: 10px;
+  margin: 8px;
   padding: 5px 10px;
   border-radius: 5px;
 }
@@ -75,7 +80,7 @@ h2 {
 .rit2 {
   height: 60px;
   margin-left: auto;
-  margin-right: -200px;
+  margin-right: -100px;
   margin-top: 30px;
 }
 
@@ -174,17 +179,20 @@ button[type="submit"] {
 button[type="submit"]:hover {
   background-color: #56b3fa; /* lighter blue-green hover effect */
 }
+p {
+  color: white;
+}
     </style>
 </head>
 <body>
     <header>
         <div class="container">
-            <ul>
-                <a href="/"><li>Меню</li></a>
-                <li>Новости</li>
-                <li>О нас</li>
-                <a href="/otziv"><li>Отзывы</li></a>
-            </ul>
+          <ul>
+            <a href="/"><li>Главная</li></a>
+            <a href="/novosti"><li>Новости</li></a>
+            <a href="/about"><li>О нас</li></a>
+            <a href="/otziv"><li>Отзывы</li></a>
+          </ul>
             <h1 class="bort">Отзывы</h1>
         </div>    
       </header>

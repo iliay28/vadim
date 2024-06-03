@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect
 import os
 import pandas as pd
+import random
 
 app = Flask(__name__)
 
@@ -17,8 +18,12 @@ def kli():
     return render_template("gaid.html", title="Hello")
 
 @app.route("/novosti")
-def new():
-    return render_template("Новости.html", title="Hello")
+def blog():
+    fw = open('news.txt', 'r')
+    news = fw.read().split('\n')
+    fw.close()
+    random.shuffle(news)
+    return render_template("Новости.html", news=news)
 
 @app.route("/about")
 def about():
